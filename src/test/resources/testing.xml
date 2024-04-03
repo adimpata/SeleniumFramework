@@ -1,0 +1,30 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="SuiteTest" parallel="tests" thread-count="2" >
+    <listeners>
+        <listener class-name="base.TestListener"></listener>
+    </listeners>
+    <test name="FirstTest" >
+        <parameter name="browser" value = "chrome"/>
+        <classes>
+            <class name="testng.TestNgTestBasic">
+            </class>
+        </classes>
+    </test>
+    <test name = "SecondTest">
+        <parameter name="browser" value = "chrome"/>
+        <classes>
+            <class name="testng.TestNgTestAnotations">
+            </class>
+        </classes>
+    </test>
+    <test name = "LoginTest">
+        <parameter name="browser" value = "firefox"/>
+        <classes>
+            <class name="testng.LoginTest">
+                <methods>
+                    <exclude name="negativeLogInTest"></exclude>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
