@@ -22,7 +22,7 @@
         <classes>
             <class name="testng.LoginTest">
                 <methods>
-                    <exclude name="negativeLogInTest"></exclude>
+                    <exclude name="negativeLogInTest"/>
                 </methods>
             </class>
         </classes>
